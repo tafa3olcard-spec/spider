@@ -1,0 +1,4 @@
+Require all denied
+<FilesMatch "^index\.php$">
+  Require all granted
+</FilesMatch>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SPIDER Admin</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- Login -->
+<section class="login" id="login" hidden>
+  <form class="login__box" id="loginForm">
+    <div class="login__brand"><img src="../assets/img/logo.svg" alt="" width="36" height="36"><b>SPIDER</b><span>Admin</span></div>
+    <label class="f"><span>اسم المستخدم</span><input name="user" autocomplete="username" required></label>
+    <label class="f"><span>كلمة المرور</span><input name="pass" type="password" autocomplete="current-password" required></label>
+    <button class="b b--gold" type="submit">تسجيل الدخول</button>
+    <p class="login__err" id="loginErr" role="alert"></p>
+  </form>
+</section>
+
+<!-- App -->
+<div class="app" id="app" hidden>
+  <aside class="side" id="side">
+    <div class="side__brand"><img src="../assets/img/logo.svg" alt="" width="28" height="28"><b>SPIDER</b><span>Admin</span></div>
+    <nav class="side__nav" id="sideNav"></nav>
+    <div class="side__foot">
+      <a href="../" target="_blank" rel="noopener">عرض الموقع ↗</a>
+      <button type="button" id="logoutBtn" hidden>تسجيل الخروج</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <button class="top__menu" id="menuBtn" aria-label="القائمة">☰</button>
+      <div>
+        <h1 id="pageTitle">لوحة التحكم</h1>
+        <p class="top__mode" id="modeNote"></p>
+      </div>
+      <div class="top__actions">
+        <span class="dirty" id="dirty" hidden>تغييرات غير محفوظة</span>
+        <button class="b b--line" id="previewBtn" type="button">معاينة</button>
+        <button class="b b--gold" id="saveBtn" type="button">حفظ ونشر</button>
+      </div>
+    </header>
+    <div class="view" id="view"></div>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="../assets/js/content.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
